@@ -5,19 +5,25 @@ def greetings(bot_name):
     print("Hello! My name is {0}.".format(bot_name))
     print("We'd like to help you with your digital marketing needs! \nWe'll help you build your brand online by creating a website, SEO, Social media marketing and more!\nReady to take your business to the next level?")
 
+# all input data will stored here in client info list
+client_info = []
+
 
 def remind_name():
     print('Please, remind me your name.')
-    name = input()
+    name = input("Enter Here: ")
+    client_info.append(name)
     print("What a great name you have, {0}!".format(name))
+
 
 
 def client_query():
     print('Now I want to know how can I help you?')
-    services= str(input())
+    services= str(input("Your Answer here: "))
+    client_info.append(services)
+    print(client_info)
 
-    if services == "website":
-        print()
+    
 
 
     print(output)
@@ -36,24 +42,24 @@ def website_offer():
 
 
 
-    answer = 1
-    guess = int(input())
-    while guess != answer:
-        print("Please, try again.")
-        guess = int(input())
+    # answer = 1
+    guess = int(input("Please select by a number: "))
+    client_info.append(guess)
+    print(client_info)
+    # while guess != int():
+    #     print("Please, try again.")
+    #     guess = int(print(input("Please select by choosing number:" )))
+        # print(input("Please select by choosing number: " + " "+ str(guess)))
 
-    print('Completed, have a nice day!')
-    print('.................................')
-    print('.................................')
-    print('.................................')
+      
 
 
 def end():
-    print('Congratulations, have a nice day!')
+    print('Thank you, have a nice day!')
     print('.................................')
     print('.................................')
     print('.................................')
-    input()
+   
 
 
 #Here is my define functions    
